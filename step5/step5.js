@@ -1,4 +1,4 @@
-var getHTML = require('./http-function');
+var getHTML = require('./http-functions');
 
 var requestOptions = {
   host: process.argv[2],
