@@ -1,4 +1,4 @@
-https = require("https");
+const https = require("https");
 
 function getAndPrintHTMLChunks () {
   var requestOptions = {
