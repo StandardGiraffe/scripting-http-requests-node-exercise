@@ -7,6 +7,8 @@ var requestOptions = {
 };
 
 
-const printUppercase = function () {
-
+const printUppercase = function (html) {
+  console.log(html.toUpperCase());
 }
+
+getHTML(requestOptions, printUppercase);
