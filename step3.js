@@ -1,10 +1,11 @@
 const https = require("https");
 
-function getAndPrintHTML() {
+function getAndPrintHTML () {
 
+// Takes parameters from the command line: (host, path).
   const requestOptions = {
-    host: "sytantris.github.io",
-    path: "/http-examples/step1.html"
+    host: process.argv[2],
+    path: process.argv[3]
   }
 
   https.get(requestOptions, (response) => {
@@ -13,15 +14,17 @@ function getAndPrintHTML() {
 
     response.on("data", (data) => {
       dataBuffer += data;
-      console.log("Received data added to the output buffer.");
+      console.log("Received a data chunk and added it to the buffer.");
     });
 
     response.on("end", () => {
-      console.log("Complete data follows: \n");
+      console.log("Data acquired.  Printing buffer:\n")
       console.log(dataBuffer);
     });
 
   });
+
+
 }
 
 getAndPrintHTML();
