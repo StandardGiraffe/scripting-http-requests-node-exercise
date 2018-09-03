@@ -1,12 +1,9 @@
 const https = require("https");
 
+
 function getAndPrintHTML () {
 
 // Takes parameters from the command line: (host, path).
-  const requestOptions = {
-    host: process.argv[2],
-    path: process.argv[3]
-  }
 
   https.get(requestOptions, (response) => {
     let dataBuffer = "";
@@ -25,6 +22,11 @@ function getAndPrintHTML () {
   });
 
 
+}
+
+const requestOptions = {
+  host: process.argv[2],
+  path: process.argv[3]
 }
 
 getAndPrintHTML();
