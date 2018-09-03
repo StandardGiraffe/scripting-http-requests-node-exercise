@@ -1,1 +1,12 @@
-getHTML = require("./http-functions.js");
+const getHTML = require("./http-functions.js");
+
+
+var requestOptions = {
+  host: process.argv[2],
+  path: process.argv[3]
+};
+
+
+const printUppercase = function () {
+
+}
