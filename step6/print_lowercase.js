@@ -5,3 +5,9 @@ const requestOptions = {
   path: process.argv[3]
 };
 
+function printLowerCase (html) {
+  console.log(html.toLowerCase());
+}
+
+getHTML(requestOptions, printLowerCase);
+
